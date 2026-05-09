@@ -1,41 +1,18 @@
-# Python Socket Programming Project
+# Embedded Network Project
 
 ## Overview
 
-This project demonstrates basic TCP socket communication in Python using client-server architecture and multithreading.
+This project is a Python-based socket programming application focused on networking and concurrent client-server communication concepts.
 
-The programs allow clients and servers to communicate over a network using TCP sockets. The project was used to grasp concepts such as concurrent connections, message transmission, and thread-based connection handling.
+The project was originally developed as a school networking assignment focused on basic socket communication and is now being updated to better reflect real-world networking and embedded systems concepts. The updated version expands on the original project by adding multithreaded client handling, telemetry-style data using JSON, periodic device status updates, and simulated network-connected device communication. The original version of the project can be found [here](https://github.com/JqJohnny/sockets) for comparison of the new changes.
 
----
 
-## Files
-
-### `socket-client.py`
-A TCP client application that:
-- connects to a server using an IP address and port
-- sends messages to the server
-- supports a quit command for closing the connection
-
----
-
-### `socket-server.py`
-A basic TCP server that:
-- listens for incoming client connections
-- receives messages from connected clients
-- logs messages received from the client
-- returns stored messages when the client disconnects
-
----
-
-### `socket-host.py`
-A multithreaded socket application that:
-- handles multiple client connections using threads
-- supports commands such as:
-  - `connect`
-  - `send`
-  - `disconnect`
-  - `exit`
-- manages concurrent communication between clients and the server
+The application demonstrates:
+- TCP socket communication
+- multithreading
+- client-server architecture
+- concurrent device handling
+- structured network communication
 
 ---
 
@@ -43,24 +20,43 @@ A multithreaded socket application that:
 
 - Python
 - TCP sockets
-- Multithreading
+- threading
+- JSON
+
+---
+
+## Files
+
+### `control_server.py`
+The central server responsible for:
+- accepting incoming device connections
+- handling multiple clients concurrently
+- receiving and displaying telemetry-style data
+
+---
+
+### `device_client.py`
+A simulated network-connected device that:
+- connects to the control server
+- periodically sends device status information
+- simulates telemetry communication
 
 ---
 
 ## Concepts Demonstrated
 
 - TCP/IP communication
-- Client-server architecture
-- Socket programming
-- Multithreading
-- Concurrent connection handling
-- Network communication fundamentals
+- socket programming
+- multithreaded server design
+- client-server communication
+- concurrent connection handling
+- basic systems/network programming concepts
 
 ---
 
-## Running the Programs
+## Running the Project
 
-### Run the Server
+### Start the Server
 
 ```bash
-python socket-server.py
+python control_server.py
