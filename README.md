@@ -60,3 +60,9 @@ A simulated network-connected device that:
 
 ```bash
 python control_server.py
+```
+
+### Start a Client
+```bash
+python device_client.py
+```
