@@ -1,4 +1,0 @@
-{"timestamp": "2026-05-11T05:58:20.005508+00:00", "event": "TELEMETRY", "device_id": "10b3c0eb-c8df-47d0-9e78-bdaadacff053", "address": "('127.0.0.1', 50996)", "data": {"device_type": "Router", "device_id": "10b3c0eb-c8df-47d0-9e78-bdaadacff053", "status": "online", "temperature": 49, "cpu_usage": 45}}
-{"timestamp": "2026-05-11T05:58:25.005997+00:00", "event": "TELEMETRY", "device_id": "10b3c0eb-c8df-47d0-9e78-bdaadacff053", "address": "('127.0.0.1', 50996)", "data": {"device_type": "Router", "device_id": "10b3c0eb-c8df-47d0-9e78-bdaadacff053", "status": "online", "temperature": 35, "cpu_usage": 78}}
-{"timestamp": "2026-05-11T05:59:59.055086+00:00", "event": "TELEMETRY", "device_id": "b6a98bd6-3f15-4cfe-bf37-6a44febca505", "address": "('127.0.0.1', 51017)"}
-{"timestamp": "2026-05-11T06:00:04.055695+00:00", "event": "TELEMETRY", "device_id": "b6a98bd6-3f15-4cfe-bf37-6a44febca505", "address": "('127.0.0.1', 51017)"}
