@@ -51,6 +51,7 @@ A simulated network-connected device that:
 - client-server communication
 - concurrent connection handling
 - basic systems/network programming concepts
+- structured logs (JSON)
 
 ---
 

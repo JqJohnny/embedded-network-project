@@ -31,6 +31,7 @@ def handle_device(client_socket, address):
                 addr=addr,
                 data=telemetry
             )
+
         except Exception as e:
             print(f"Error: {e}")
             break
