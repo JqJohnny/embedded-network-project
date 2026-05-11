@@ -1,9 +1,11 @@
 import socket
 import threading
 import json
+from datetime import datetime, UTC
 
 HOST = '127.0.0.1'
 PORT = 12000
+LOG_FILE = "device_logs.jsonl"
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((HOST, PORT)) 
@@ -23,12 +25,11 @@ def handle_device(client_socket, address):
 
             telemetry = json.loads(data.decode())
 
-            print(
-                f"Device: {telemetry['device_type']} | "
-                f"Device: {telemetry['device_id']} | "
-                f"Status: {telemetry['status']} | "
-                f"Temperature: {telemetry['temperature']}C | "
-                f"CPU Usage: {telemetry['cpu_usage']}%"
+            log_event(
+                event_type="TELEMETRY",
+                device_id=telemetry['device_id'],
+                addr=addr,
+                data=telemetry
             )
         except Exception as e:
             print(f"Error: {e}")
@@ -36,6 +37,20 @@ def handle_device(client_socket, address):
     
     print(f"Connection closed: {address}")
     client_socket.close()
+
+
+def log_event(event_type, device_id, addr, data=None):
+    log_entry = {
+        "timestamp": datetime.now(UTC).isoformat(),
+        "event": event_type,
+        "device_id": device_id,
+        "address": str(addr),
+        "data": data
+    }
+
+    with open(LOG_FILE, "a") as f:
+        f.write(json.dumps(log_entry) + "\n")
+
 
 while True:
     client_socket, addr = server_socket.accept()
