@@ -24,6 +24,7 @@ def handle_device(client_socket, address):
             telemetry = json.loads(data.decode())
 
             print(
+                f"Device: {telemetry['device_type']} | "
                 f"Device: {telemetry['device_id']} | "
                 f"Status: {telemetry['status']} | "
                 f"Temperature: {telemetry['temperature']}C | "

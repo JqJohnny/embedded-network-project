@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\johnq\\AppData\\Local\\Temp\\081b5473-87b8-4f57-a6ca-7b0b0124d5d7_Tharun Polu Resume - Template.zip.5d7\\main.aux": true,
+        "**/c:\\Users\\johnq\\AppData\\Local\\Temp\\081b5473-87b8-4f57-a6ca-7b0b0124d5d7_Tharun Polu Resume - Template.zip.5d7\\main.log": true,
+        "**/c:\\Users\\johnq\\AppData\\Local\\Temp\\081b5473-87b8-4f57-a6ca-7b0b0124d5d7_Tharun Polu Resume - Template.zip.5d7\\main.gz": true,
+        "**/c:\\Users\\johnq\\AppData\\Local\\Temp\\081b5473-87b8-4f57-a6ca-7b0b0124d5d7_Tharun Polu Resume - Template.zip.5d7\\main.out": true
+    }
+}

@@ -1,12 +1,13 @@
 import socket
 import json
-import random
+import uuid
 import time
+import random
 
 HOST = '127.0.0.1'
 PORT = 12000
 
-DEVICE_ID = f"router_{random.randint(1,100)}"
+DEVICE_ID = str(uuid.uuid4())
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))
@@ -15,6 +16,7 @@ print(f"{DEVICE_ID} connected to server.")
 
 while True:
     telemetry_data = {
+        "device_type": "Router",
         "device_id": DEVICE_ID,
         "status": "online",
         "temperature": random.randint(35, 60),
@@ -27,4 +29,4 @@ while True:
 
     print(f"Sent: {message}")
 
-    time.sleep(3)
+    time.sleep(5)
